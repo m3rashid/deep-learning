@@ -39,13 +39,25 @@ e = torch.empty(size=(1, 5)).normal_(mean=0, std=1)
 # same as torch.rand but with lower and upper bounds
 f = torch.empty(size=(1, 5)).uniform_(0, 1)
 
+# tensor as a diagonal matrix
+g = torch.diag(torch.ones(3))
 
-# print(x)
-# print(y)
-# print(z)
-# print(a)
-# print(b)
-# print(c)
-# print(d)
-# print(e)
-print(f)
+h = torch.arange(4)
+
+# type conversion to bool type
+print(h.bool())
+
+# convert to int16 type
+print(h.short())
+
+# convert to int64 type
+print(h.long())
+
+# convert to float16
+print(h.half())
+
+# convert to float32
+print(h.float())
+
+# convert to float64
+print(h.double())
